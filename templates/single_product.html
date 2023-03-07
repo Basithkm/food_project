@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock title %}Menu
+
+{%block main-content %}
+
+
+<br><br>
+        <div class="banner-wthree-info container">
+            <div class="row">
+                <div id="logo">
+                    <h1> <a href="index.html"><span class="log-w3pvt">CATEGORIES</span></a></h1>
+                </div>   
+            </div>
+        </div>
+                <div class="row about-bottom-w3l text-center pt-lg-5" >
+                            <div class="col-sm-6 about-grid">
+                                <div class="about-grid-main">
+                                    <img src="{% static 'images/s1.jpg' %}" alt="" class="img-fluid">
+                                    <h4 class="mb-3">Clean & Continental Place</h4>
+                                    <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                                    <!-- <a href="#" class="button-w3ls mt-4" data-toggle="modal" data-target="#exampleModalCenter1">Read More
+                                        <i class="fas fa-long-arrow-alt-right ml-3"></i>
+                                    </a> -->
+                                </div>
+                            </div>  
+                            
+                            <div class="col-md-6 contact_left p-4">
+                                <div id="logo">
+                                    <h1> <a href="index.html"><span class="log-w3pvt">Order Now</span></a></h1>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <th>Product Name</th>
+                                        <!-- <th>Image</th> -->
+                                        <th>Size</th>
+                                        <th>Price</th>
+                                        <th>sell</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Product A</td>
+                                        <!-- <td><img src="images/b1.jpg" alt="Product A"></td> -->
+                                        <td>Small</td>
+                                        <td>$10</td>
+                                        <td><div class="grid-price">
+                                            <button class="btn submit">add cart</button>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product A</td>
+                                        <!-- <td><img src="images/b1.jpg" alt="Product A"></td> -->
+                                        <td>Small</td>
+                                        <td>$10</td>
+                                        <td><div class="grid-price">
+                                            <button class="btn submit">add cart</button>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product B</td>
+                                        <!-- <td><img src="product-b.jpg" alt="Product B"></td> -->
+                                        <td>Medium</td>
+                                        <td>$20</td>
+                                        <td><div class="grid-price">
+                                            <button class="btn submit">add cart</button>
+                                        </div></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product C</td>
+                                        <!-- <td><img src="product-c.jpg" alt="Product C"></td> -->
+                                        <td>Large</td>
+                                        <td>$30</td>
+                                        <td><div class="grid-price">
+                                            <button class="btn submit">add cart</button>
+                                        </div></td>
+                                    </tr>
+                                </table>
+                            </div>
+        </div>
+    </div>
+
+{%endblock main-content%}

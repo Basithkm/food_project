@@ -1,0 +1,50 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock title %}Home
+
+{%block main-content %} 
+<br><br>
+        <div class="banner-wthree-info container">
+            <div class="row">
+                    <div id="logo">
+                        <h1> <a href="index.html"><span class="log-w3pvt">TODAY SPECIALS</span></a></h1>
+                    </div>
+                    <div class="container py-5">
+                        <div class="row shop-wthree-info text-center">
+                            {% for cat in category %}
+                            <a href="#">
+                                <div class="col-lg-3 shop-info-grid text-center mt-4">
+                                    <div class="product-shoe-info shoe">
+                                        <div class="men-thumb-item">
+                                            <img src="{{cat.product_image.url}}" class="img-fluid" alt="" height="120%" width="120%">
+                                        </div>
+                                        <div class="item-info-product">
+                                            <h4>
+                                                <a>{{cat.product_name}}</a>
+                                            </h4>
+                
+                                            <div class="product_price">
+                                                <div class="grid-price">
+                                                    <!-- <button class="btn submit">add cart</button> -->
+                                                </div>
+                                            </div>
+                                            <!-- <ul class="stars">
+                                                <span class="money"><span class="line">$799</span> $675.00</span>
+                                            </ul> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            {% endfor %}
+                            
+                            
+
+
+            </div>
+        </div>
+    </div>
+</div></div>
+     {%endblock main-content%}
+
+    

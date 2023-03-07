@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock title %}Home
+
+{%block main-content %} 
+
+            <!-- <section class="cart-items">
+                <div id="logo">
+                    <h1> <a href="index.html"><span class="log-w3pvt">TODAY SPECIALS</span></a></h1>
+                </div>
+
+                <br><br><br><br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://via.placeholder.com/150x150" alt="Item Image">
+                                <div class="card-body">
+                                    <h3 class="card-title">Item Name</h3>
+                                    <p class="card-text">Item Description</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="quantity">Quantity:</label>
+                                            <input type="number" class="form-control" id="quantity" value="1" min="1">
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="price">$10.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-price">
+                                    <button class="btn submit">add cart</button>
+                                    <button class="btn btn-danger remove-button">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://via.placeholder.com/150x150" alt="Item Image" height="100%" width="100%">
+                                <div class="card-body">
+                                    <h3 class="card-title">Item Name</h3>
+                                    <p class="card-text">Item Description</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="quantity">Quantity:</label>
+                                            <input type="number" class="form-control" id="quantity" value="1" min="1">
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="price">$10.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-price">
+                                    <button class="btn submit">add cart</button>
+                                    <button class="btn btn-danger remove-button">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://via.placeholder.com/150x150" alt="Item Image" height="100%" width="100%">
+                                <div class="card-body">
+                                    <h3 class="card-title">Item Name</h3>
+                                    <p class="card-text">Item Description</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="quantity">Quantity:</label>
+                                            <input type="number" class="form-control" id="quantity" value="1" min="1">
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="price">$10.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-price">
+                                    <button class="btn submit">add cart</button>
+                                    <button class="btn btn-danger remove-button">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="https://via.placeholder.com/150x150" alt="Item Image" height="100%" width="100%">
+                                <div class="card-body">
+                                    <h3 class="card-title">Item Name</h3>
+                                    <p class="card-text">Item Description</p>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="quantity">Quantity:</label>
+                                            <input type="number" class="form-control" id="quantity" value="1" min="1">
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="price">$10.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="grid-price">
+                                    <button class="btn submit">add cart</button>
+                                    <button class="btn btn-danger remove-button">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <br><br>
+            
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                  <h2 id="cart_heading"></h2>
+                  <table class="table">
+                      <thead class="thead-light">
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item image</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Price</th>
+                      </tr>
+                      <thead class="thead-light">
+                      <tr>
+                        <td scope="col">#</td>
+                        <td scope="col">#</td>
+                        <td scope="col">#</td>
+                        <td scope="col">#</td>
+                        <td scope="col">#</td>
+                      </tr>
+                      </thead>
+                      <thead class="thead-light">
+                        <tr>
+                          <td scope="col">#</td>
+                          <td scope="col">#</td>
+                          <td scope="col">#</td>
+                          <td scope="col">#</td>
+                          <td scope="col">#</td>
+                        </tr>
+                        </thead>
+                    </thead>
+                      <tbody id="cart_body">
+                      </tbody>
+                  </table>
+                  <h3>Total: <span class="badge badge-primary" id="total"></span></h3>
+                </div>
+              
+                <div class="row justify-content-center">
+                  <!-- <button id="checkout_button" type="button" class="btn btn-success" onclick="checkout()">Checkout</button> -->
+        
+                </div>
+              </div>
+              
+
+              <div class="container col-8 my-5 br-2 rounded">
+                <div class="row g-3">
+                    <div class="col-8">
+                        <h4>Billing Address</h4>
+                        <form>
+                            <div class="row">
+     
+                                <div class="col-12">
+                                    <label class="form-label" for="address">Name : </label>
+                                    <input type="text" id="address" class="form-control">
+                                </div>
+
+                                
+                                <div class="col-5">
+                                    <br>
+                                    <label class="form-label" for="country">Table name : </label>
+                                    <select class="form-select" id="country">
+                                        <option>Choose</option>
+                                        
+                                        <option>Table 1</option>
+                                        <option>Table 2</option>
+                                        <option>Table 3</option>
+                                        <option>Table 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+               
+                            <hr>
+                            <h4>Payment</h4>
+
+                            <div class="form-check text-center">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  Cash Payment
+                                </label>
+                                <br>
+                                or
+                              </div>
+                              <div class="form-check text-center">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  Online Payment
+                                </label><br>
+
+                                <div class="field-group">
+
+                                    <!-- <div class="content-input-field">
+                                        <input name="password" id="text3" type="text" value="" placeholder="Password" required="">
+                                    </div> -->
+                                    <input type="text" id="cardname" class="form-control">
+                                    
+                                </div>
+                    
+
+                              </div>
+                              <div class="form-check text-center">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                  Card Payment
+                                </label>
+                              </div>
+
+                            <br>
+                            <div class="row">
+                                <div class="col-6">
+                                    <label class="form-label" for="cardname">Name on Card </label>
+                                    <input type="text" id="cardname" class="form-control">
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label" for="creditcard">Credit Card Number </label>
+                                    <input type="text" id="creditcard" class="form-control">
+                                </div>
+                            </div>
+                            <hr>
+                            <button type="submit" class="btn btn-primary btn-block mb-4">Continue To Checkout</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+{%endblock main-content%}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock title %}Menu
+
+
+{%block main-content %} 
+
+{% comment %} <div class="container">
+
+    <div class="form-container sign-in-container">
+        <form action="#">
+            <h1>Sign In</h1>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            
+            <div class="content-input-field">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="overlay-container">
+
+        </div>
+    </div>
+</div> {% endcomment %}
+
+<div class="container d-flex justify-content-center">
+    <div class="col-md-6" >
+    <div class="contact_center p-lg-5 p-4">
+        <form action="#" method="post">
+            <div class="field-group">
+            </div>
+            <div class="field-group">
+
+                <div class="content-input-field">
+                    <input name="text1" id="text1" type="email" value="" placeholder="UserName" required="">
+                </div>
+            </div>
+            <div class="field-group">
+
+                <div class="content-input-field">
+                    <input name="password" id="text3" type="text" value="" placeholder="Password" required="">
+                </div>
+            </div>
+
+            <div class="content-input-field">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+</div>
+
+{%endblock main-content%}
