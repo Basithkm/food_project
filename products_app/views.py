@@ -16,6 +16,7 @@ def menu(request):
 
 def select_product(request,id):
     product=Product.objects.get(id=id)
+    products =Product.objects.filter(category=cats)
     
     context ={
         'products':product
