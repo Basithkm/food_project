@@ -7,27 +7,29 @@
 <div class="container d-flex justify-content-center">
     <div class="col-md-6" >
     <div class="contact_center p-lg-5 p-4">
+        <h3 class="title-wthree mb-lg-5 mb-4 text-center">Sign </h3>
         <form action="#" method="post">
+            {% csrf_token %}
             <div class="field-group">
             </div>
             <div class="field-group">
                 <div class="content-input-field">
-                    <input name="text1" id="text1" type="email" value="" placeholder="UserName" required="">
+                    <input name="username" id="text1" type="text" value="" placeholder="UserName" required="">
                 </div>
             </div>
             <div class="field-group">
                 <div class="content-input-field">
-                    <input name="text1" id="text1" type="email" value="" placeholder="Phone" required="">
+                    <input name="email" id="text1" type="email" value="" placeholder="Email" required="">
                 </div>
             </div>
             <div class="field-group">
                 <div class="content-input-field">
-                    <input name="password" id="text3" type="text" value="" placeholder="Password" required="">
+                    <input name="password1" id="text3" type="password" value="" placeholder="Password" required="">
                 </div>
             </div>
             <div class="field-group">
                 <div class="content-input-field">
-                    <input name="password" id="text3" type="text" value="" placeholder="ConfirmPassword" required="">
+                    <input name="password2" id="text3" type="password" value="" placeholder="ConfirmPassword" required="">
                 </div>
             </div>
 

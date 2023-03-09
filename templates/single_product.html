@@ -9,73 +9,51 @@
         <div class="banner-wthree-info container">
             <div class="row">
                 <div id="logo">
-                    <h1> <a href="index.html"><span class="log-w3pvt">CATEGORIES</span></a></h1>
+                    {% if products%}
+                    <h1> <a href="index.html"><span class="log-w3pvt">{{products.product_name}}</span></a></h1>
+                   
                 </div>   
             </div>
         </div>
                 <div class="row about-bottom-w3l text-center pt-lg-5" >
                             <div class="col-sm-6 about-grid">
-                                <div class="about-grid-main">
-                                    <img src="{% static 'images/s1.jpg' %}" alt="" class="img-fluid">
-                                    <h4 class="mb-3">Clean & Continental Place</h4>
-                                    <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                                <div class="about-grid-main">   
+                                    <img src="{{products.product_image.url}}" alt="" class="img-fluid">
+                                    <h4 class="mb-3">{{products.product_name}}</h4>
+                                    <p> {{products.product_description}}</p>
                                     <!-- <a href="#" class="button-w3ls mt-4" data-toggle="modal" data-target="#exampleModalCenter1">Read More
                                         <i class="fas fa-long-arrow-alt-right ml-3"></i>
                                     </a> -->
                                 </div>
                             </div>  
-                            
+                            {%endif%}
                             <div class="col-md-6 contact_left p-4">
                                 <div id="logo">
                                     <h1> <a href="index.html"><span class="log-w3pvt">Order Now</span></a></h1>
                                 </div>
                                 <table>
                                     <tr>
-                                        <th>Product Name</th>
+                                        <!-- <th>Product Name</th> -->
                                         <!-- <th>Image</th> -->
                                         <th>Size</th>
                                         <th>Price</th>
                                         <th>sell</th>
+                                        <th>But</th>
                                     </tr>
+                                    {% for productsizeprice in productssizeandprice%}
                                     <tr>
-                                        <td>Product A</td>
+                                        <!-- <td>Product A</td> -->
                                         <!-- <td><img src="images/b1.jpg" alt="Product A"></td> -->
-                                        <td>Small</td>
-                                        <td>$10</td>
-                                        <td><div class="grid-price">
-                                            <button class="btn submit">add cart</button>
-                                        </div></td>
+                                        <td name="size">{{productsizeprice.size}}</td>
+                                        <td name="price">{{productsizeprice.price}}</td>
+                                        <td><a href="{% url 'add_to_cart_item' productsizeprice.id %}"><button class="btn submit">Buy Now </button></a></td>
+                                       
                                     </tr>
-                                    <tr>
-                                        <td>Product A</td>
-                                        <!-- <td><img src="images/b1.jpg" alt="Product A"></td> -->
-                                        <td>Small</td>
-                                        <td>$10</td>
-                                        <td><div class="grid-price">
-                                            <button class="btn submit">add cart</button>
-                                        </div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Product B</td>
-                                        <!-- <td><img src="product-b.jpg" alt="Product B"></td> -->
-                                        <td>Medium</td>
-                                        <td>$20</td>
-                                        <td><div class="grid-price">
-                                            <button class="btn submit">add cart</button>
-                                        </div></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Product C</td>
-                                        <!-- <td><img src="product-c.jpg" alt="Product C"></td> -->
-                                        <td>Large</td>
-                                        <td>$30</td>
-                                        <td><div class="grid-price">
-                                            <button class="btn submit">add cart</button>
-                                        </div></td>
-                                    </tr>
+                                    {%endfor%}
                                 </table>
                             </div>
         </div>
     </div>
-
+    </div>
+<script src="{% static 'js/my_js.js'%}"></script>
 {%endblock main-content%}
