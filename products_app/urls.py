@@ -8,7 +8,7 @@ urlpatterns = [
     path('gallery',views.galllery,name='galllery'),
     path('menu/<int:id>/',views.select_menu,name='select_menu'),
     path('product/<int:id>/',views.select_product,name='select_product'),
-    path('offers/',views.store,name='offers'),
+
     path('hours/',views.hours,name='hours'),
     path('contact/',views.contact,name='contact'),
     path('login',views.login_page,name='login'),

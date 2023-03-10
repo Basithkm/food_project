@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
-from  . models import Category,Product,ProductSizeAndPrice,CartItem
+from  . models import Category,Product,ProductSizeAndPrice,CartItem,TableName
 from django.contrib.auth.models import User,auth
 from django.contrib.auth import authenticate,login,logout
 from django.views import View
@@ -106,28 +106,9 @@ def logout_request(request):
 
 
 
-def store(request):
-    if request.user.is_authenticated:
-        
-        items=Product.objects.all()
-        # context={'form': items,   
-        #         }
-        return render(request, 'offers.html')
-    
-    else:
-        return render(request,'login.html')
 
-# def cart(request):
-#     user=request.user
-#     size =request.GET('size')
-#     print(size)
-#     return redirect('/')
-
-
-#  <a href="{% url 'checkout' %}" class="btn"><i class="fa-solid fa-bucket"></i>Orders</a> 
 
 def add_to_cart_item(request, id):
-    
     if request.user.is_authenticated:
         product = get_object_or_404(ProductSizeAndPrice, id=id)
         cart_item, created = CartItem.objects.get_or_create(
@@ -172,9 +153,11 @@ def cart_detail(request):
         user=request.user
         cart_items = CartItem.objects.filter(user=request.user)
         total = sum(item.size.price * item.quantity for item in cart_items)
+        table =TableName.objects.all()
         return render(request, "cart.html", {
             "cart_items": cart_items,
             "total": total,
+            'table':table
         })
     else:
         return redirect('login_page')
