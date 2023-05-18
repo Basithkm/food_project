@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-8drl5z6w&r91uf*#6pe3)h((^3@pu9=+bbe(3@gm$^rrd7l^j=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.versel.app']
 
 
 # Application definition
@@ -130,3 +130,7 @@ STATICFILES_DIRS =[
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+RAZORPAY_API_KEY_ID = '<your_key_id>'
+RAZORPAY_API_KEY_SECRET = '<your_key_secret>'

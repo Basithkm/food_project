@@ -85,6 +85,7 @@ def login_page(request):
 
 
 
+
 def registration(request):
     if request.method=='POST':
         uname=request.POST.get('username')
@@ -102,8 +103,6 @@ def registration(request):
 def logout_request(request):
     logout(request)
     return redirect('index')
-
-
 
 
 

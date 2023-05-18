@@ -41,6 +41,7 @@ class CartItem(models.Model):
     size = models.ForeignKey(ProductSizeAndPrice, on_delete=models.CASCADE,null=True)
     product=models.ForeignKey(Product,on_delete=models.CASCADE,null=True)
     quantity = models.PositiveIntegerField(default=1,null=True)
+    
     user = models.ForeignKey(User, on_delete=models.CASCADE,null=True)
 
     @property
